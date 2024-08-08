@@ -18,6 +18,7 @@ export async function GET(req: NextRequest) {
 
     const response = await fetch(targetUrl, {
       signal: controller.signal,
+      mode: "no-cors",
     });
 
     clearTimeout(timeoutId);
